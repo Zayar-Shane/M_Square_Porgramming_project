@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dark Mode</title>
+        <style>
+            body {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            p {
+                width: 45%;
+            }
+
+            .btn {
+                background-color: black;
+                color: #fff;
+            }
+
+            body.dark {
+                background-color: #222;
+            }
+
+            p.dark {
+                color: #eee;
+            }
+
+            .btn.dark {
+                background-color: #eee;
+                color: #222;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis veritatis necessitatibus, impedit eveniet doloremque amet aspernatur hic vel assumenda qui adipisci velit in nesciunt consequatur, recusandae eum harum voluptas sit!</p>
+        <button class="btn">Dark Mode</button>
+
+        <script>
+            const body = document.querySelector("body");
+            const text = document.querySelector("p");
+            const btn = document.querySelector(".btn");
+
+            btn.addEventListener("click", () => {
+                body.classList.toggle("dark");
+                text.classList.toggle("dark");
+                btn.classList.toggle("dark");
+            });
+
+        </script>
+    </body>
+</html>

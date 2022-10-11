@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            display: block;
+            height: 42px;
+            padding: 12px;
+            margin:40px auto;
+            position: relative;
+        }
+
+        .btn::before {
+            content: attr(data-count);
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            top: -12px;
+            border: 1px solid lightgray;
+            padding: 2px;
+            left: 50px;
+        }
+
+        div {
+            color: transparent;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            width: 300px;
+            height: 300px;
+            border: 1px double black;
+            padding: 20px;
+            background: url("https://cdn.pixabay.com/photo/2016/12/29/12/27/cyber-glasses-1938449__340.jpg");
+            background-repeat: no-repeat;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="btn" data-count="56"> button </button>
+
+    <div>
+        <p>Hello World!</p>
+        <p>Love Codeliber</p>
+    </div>
+</body>
+</html>
